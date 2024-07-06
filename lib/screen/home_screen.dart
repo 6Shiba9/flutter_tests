@@ -8,20 +8,32 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const Drawer(
-        child: Text('f*uking drawer'),
+        child: Text('เมนู'),
       ),
       appBar: AppBar(
-        title: Text('Home'), 
+        title: Center(child: Text('หน้าหลัก')),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => SecondScreen()),
-            );
-          },
-          child: Text('To Second Screen'),
-        )
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              color: Colors.blue,
+              height: 120,
+              width: 120,
+            ),
+            Container(
+              color: Colors.red,
+              height: 120,
+              width: 120,
+            ),
+            Container(
+              color: Colors.green,
+              height: 150,
+              width: 120,
+            ),
+          ],
+        ),
       ),
     );
   }
